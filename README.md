@@ -27,12 +27,13 @@ A fun and interactive desktop application that lets you try on virtual glasses i
 
 ##  Project Structure
 
+```
 VirtualTryOnJava/
 │
 ├── lib/
-│   └── opencv_java4110.dll               # OpenCV DLL file
-│   |__ opencv-4110.jar
-|
+│   ├── opencv_java4110.dll               # OpenCV DLL file
+│   └── opencv-4110.jar                   # OpenCV Java JAR
+│
 ├── src/
 │   └── main/
 │       ├── java/
@@ -41,9 +42,9 @@ VirtualTryOnJava/
 │       │
 │       └── resources/
 │           ├── models/
-│           │   └── haarcascade_frontalface_alt.xml   # Face detection model
-│           │   |__ haarcascade_eye.xml
-|           |
+│           │   ├── haarcascade_frontalface_alt.xml   # Face detection model
+│           │   └── haarcascade_eye.xml               # Optional eye model
+│           │
 │           └── glasses/
 │               ├── glasses_01.png
 │               ├── glasses_02.png
@@ -52,11 +53,10 @@ VirtualTryOnJava/
 │
 ├── pom.xml                               # Maven configuration file
 └── README.md                             # Project documentation
-
  
 ---
 
-## 💻 How to Run the Project
+##  How to Run the Project
 
 Follow these steps to successfully run the Virtual Glasses Try-On project on your local machine:
 
@@ -121,7 +121,7 @@ mvn compile exec:java "-Dexec.mainClass=tryon.VirtualTryOn" "-Dexec.jvmArgs=-Dja
 
 Now your webcam will open and detect your face with virtual glasses overlaid!
 
-🎉 Press **keys 1–4** to switch between glasses styles in real-time.
+Press **keys 1–4** to switch between glasses styles in real-time.
 
 ---
 
